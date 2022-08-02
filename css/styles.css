@@ -1,0 +1,285 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.merchandise__container { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 6fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "navBar"
+    "merchandise__title__container"
+    "merchandise__main__container"
+    "footer";
+}
+
+.navBar { 
+    grid-area: navBar;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas: "logoMenuDeNavegacion__container"
+                            "menuDeNavegacion";
+}
+
+.navBar .menuDeNavegacion li a {
+    text-decoration: none;
+    flex-wrap: wrap;
+    color:white;
+    font-family: "Bungee";
+    font-size:15px;
+}
+
+.logoMenuDeNavegacion__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menuDeNavegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+}
+
+.menuDeNavegacion {
+    margin-left: -30px;
+}
+
+.navBar .menuDeNavegacion li .subrayado:hover {
+    border-bottom: solid 2px white;
+}
+
+
+
+.merchandise__title__container { 
+    grid-area: merchandise__title__container;
+    text-align: center;
+}
+.merchandise__title__container h1{
+    color: white;
+    font-family: "Bungee";
+    font-size:40px;
+}
+
+.merchandise__main__container {  
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.3fr 5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "merchandise__main__margin1 merchandise__mainFilter__container merchandise__main__margin2"
+    "merchandise__main__margin1 merchandise__cards__container merchandise__main__margin2";
+    grid-area: merchandise__main__container;
+}
+
+
+
+.merchandise__mainFilter__container{
+    margin: 10px 0px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#buscador{
+    width:80%;
+    font-family: "Bungee";
+    border-radius:10px;
+}
+
+
+.merchandise__carritoLogo{
+    width:140px;
+    height:80px;
+}
+
+#iconCart{
+    color:black;
+    font-family: "Bungee";
+    font-size:20px;
+    position:relative;
+}
+
+/*#iconCart img{
+    
+}*/
+
+#iconCart span{
+    position:absolute;
+    top: 18%;
+    right: 39%;
+}
+
+
+.carritoFinal__container{
+    border-radius: 20px;
+}
+
+.aviso__carritoDeCompras{
+background-color:greenyellow;
+display:flex;
+align-items: center;
+flex-direction: column;
+border-radius: 20px;
+border:solid 5px black;
+}
+
+.aviso__carritoDeCompras h4{
+    font-family: "Bungee";
+    font-weight: 300;
+}
+
+.aviso__carritoDeCompras p{
+    font-family: "Russo One";
+}
+
+#btnEliminar{
+    font-family: "Bungee";
+    background-color: black;
+    border: solid white 2px;
+    color:white;
+}
+
+#btnEliminar:hover{
+    font-family: "Bungee";
+    background-color: white;
+    border: solid black 2px;
+    color:black;
+}
+
+
+
+#merchandise__cards__container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    border:solid 2px white;
+}
+
+.card{
+    width: 300px;
+    height:350px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:greenyellow;
+    border-radius: 20px;
+    margin: 15px;
+    
+}
+
+.card-image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 150px;
+}
+
+.card-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-family: "Bungee";
+    font-size:10px;
+}
+
+.btnComprar{
+    font-family: "Bungee";
+    background-color: black;
+    border: solid white 2px;
+    color:white;
+}
+
+.btnComprar:hover{
+    font-family: "Bungee";
+    background-color: white;
+    border: solid black 2px;
+    color:black;
+}
+
+.carritoImagen__container{
+    position: relative;
+}
+
+.carritoFinal__container{
+    background-color: greenyellow;
+    font-family: "Bungee";
+    text-align: center;
+}
+
+.producto__carritoFinal__container{
+    display:flex;
+    justify-content:space-around;
+
+}
+
+.imagen__carrito__final{
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+}
+
+
+.swal-input{
+    font-family: "Russo One";
+    margin-top: 10px;
+    background:linear-gradient(to left, silver, white);
+    border-radius: 10px;
+
+
+}
+
+.swal2-popup{
+    width:250px;
+    height:400px;
+}
+
+.swal2-show{
+    border:2px white solid;
+}
+
+#swal2-title{
+    color:black;
+    font-family: "Bungee";
+}
+
+.swal2-styled.swal2-confirm {
+    border:black;
+    border-radius: 0.25em;
+    background: initial;
+    background-color: white;
+    color: black;
+    font-size: 1em;
+}
+
+.toastify{
+    color: black;
+    font-family: "Bungee";
+}
+
+.toast-close{
+    color:black;
+}
+
+.merchandise__main__margin1 { grid-area: merchandise__main__margin1; }
+
+.merchandise__main__margin2 { grid-area: merchandise__main__margin2; }
+
+.merchandise__mainFilter__container { grid-area: merchandise__mainFilter__container; }
+
+.footer { grid-area: footer; }
